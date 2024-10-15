@@ -1,16 +1,49 @@
 package mutantes.algoritmo;
 
 
+import mutantes.exception.MatrizInvalida;
+
 public class Matriz {
-    //Secuencias de ADN aceptadas
-    private static final String[] SECUENCIAS_MUTANTES = {"AAAA", "CCCC", "GGGG", "TTTT"};
-    //Tamaño de la matriz que se recibe
-    public int N;
-    //Las 8 direciones posibles en las que nos podemos mover, siendo -1 atrás, 1 adelante y 0 nada.
-    private static int filDirs[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+    private static final String[] SECUENCIAS_MUTANTES = {"AAAA", "CCCC", "GGGG", "TTTT"};       //Secuencias de ADN aceptadas
+    public int N;                                                                               //Tamaño de la matriz que se recibe
+    private static int filDirs[] = {-1, -1, -1, 0, 0, 1, 1, 1};                                 //Las 8 direciones posibles en las que nos podemos mover, siendo -1 atrás, 1 adelante y 0 nada.
     static int colDirs[] = {-1, 0, 1, -1, 1, -1, 0, 1};
-    //Contador de cuántas secuencias encontradas van
-    private int count = 0;
+    private int count = 0;                                                                      //Contador de cuántas secuencias encontradas van
+
+
+    public boolean verificarADN(String[] adn) {
+        // Validación de array null
+        if (adn == null) {
+            System.out.println("La matriz es null.");
+            throw new NullPointerException("El array de ADN no puede ser null.");
+        }
+
+        int N = adn.length;
+
+        // Validación de array vacío
+        if (N == 0) {
+            System.out.println("La matriz está vacía.");
+            return false;
+        }
+
+        // Validación de matriz NxN
+        for (String fila : adn) {
+            if (fila.length() != N) {
+                System.out.println("La matriz NO es de NxN.");
+                return false;
+            }
+        }
+
+        // Validación de caracteres permitidos
+        for (String fila : adn) {
+            if (!fila.matches("[ACGT]+")) {
+                System.out.println("La matriz posee caracteres indebidos.");
+                return false;
+            }
+        }
+
+        return true; // Si pasa todas las validaciones
+    }
 
     //Verifica que no nos salgamos de los límites
     boolean esSeguro(int i, int j) {
@@ -22,7 +55,14 @@ public class Matriz {
 
     //Recorre cada elemento de la matriz y lleva el conteo de cuántas secuencias encontradas en la misma van
     public boolean analizarADN(String[] adn) {
+
+        // Verificar el ADN antes de analizarlo
+        if (!verificarADN(adn)) {
+            throw new MatrizInvalida("MATRIZ INVÁLIDA");
+        }
+
         N = adn.length;
+
         for (String mutantADNSec : SECUENCIAS_MUTANTES) {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
