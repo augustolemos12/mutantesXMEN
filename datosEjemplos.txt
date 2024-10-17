@@ -1,0 +1,117 @@
+[
+    {
+        "nombre": "Pedro",
+        "apellido": "Gomez",
+        "edad": 55,
+        "adn": [
+            "ACGT",
+            "CAGT",
+            "TTAT",
+            "AGAC"
+        ],
+    },
+    {
+        "nombre": "Wade",
+        "apellido": "Wilson",
+        "edad": 35,
+        "adn": [
+            "ATGCGA",
+            "CAGTGC",
+            "TTATGT",
+            "AGAAGG",
+            "CCCATA",
+            "TCACTG"
+        ],
+    },
+    {
+        "nombre": "Cassandra ",
+        "apellido": "Nova",
+        "edad": 25,
+        "adn": [
+            "ATGCGA",
+            "CAGTGC",
+            "TTATGT",
+            "AGAAGG",
+            "CCCATA",
+            "TCACTG"
+        ],
+    },
+    {
+        "nombre": "Wolverine ",
+        "apellido": null,
+        "edad": 55,
+        "adn": [
+            "ATGCGA",
+            "CAGTGC",
+            "TTATGT",
+            "AGAAGG",
+            "CCCATA",
+            "CCCCTG"
+        ],
+    },
+    {
+        "nombre": "Augusto ",
+        "apellido": "Lemos",
+        "edad": 21,
+        "adn": [
+            "ATGC",
+            "CAGT",
+            "TTAT",
+            "AGAC"
+        ],
+    },
+    {
+        "nombre": "Ana ",
+        "apellido": "Abaca",
+        "edad": 22,
+        "adn": [
+            "ATGC",
+            "CAGT",
+            "TTAT",
+            "AGAC"
+        ],
+    },
+    {
+        "nombre": "Charles",
+        "apellido": "Xaxavier",
+        "edad": 58,
+        "adn": [
+            "TCGGGTGAT",
+            "TGATCCTTT",
+            "TACGAGTGA",
+            "AAATGTACG",
+            "ACGAGTGCT",
+            "AGACACATG",
+            "GAATTCCAA",
+            "ACTACGACC",
+            "TGAGTATCC"
+        ],
+    },
+    {
+        "nombre": "Quicksilver",
+        "apellido": null,
+        "edad": 58,
+        "adn": [
+            "TCGGGTGATCTAGCTACCAG",
+            "TGATCCTTTCAGGATGCTCA",
+            "TACGAGTGAGAGTCTGATGC",
+            "AAATGTACGTTGACTCGTGA",
+            "ACGAGTGCTCTAGCTAGTCA",
+            "AGACACATGTGACTAGCGTA",
+            "GAATTCCAAGGTACTGACTG",
+            "ACTACGACCAGTCTAGTCAA",
+            "TGAGTATCCGTAGTCTGCAG",
+            "CCTGATGATTCGAGTACCTA",
+            "TGCACGTACGGGTCAGCTAG",
+            "GACTGTACGCTAGTAGTGGA",
+            "TACCGTAGGATCAGGTCGTA",
+            "AGTAGTCGATCGTACAGTGA",
+            "GCATCAGTGTAGCGTAGTGC",
+            "TGGAGTACCGTAGTCTGAGC",
+            "CACGTAGTGACGTGAGTGCA",
+            "GTCAGCTACTGACGTAGTGA",
+            "CGTACGTGACTAGCTAGGAC",
+            "TAGCGTAGTACGTAGTCGGA"
+        ],
+    }
+]
